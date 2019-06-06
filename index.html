@@ -357,6 +357,260 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/V2ray一键安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="墨与笙">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://bbbtr.pw/image/jpg/20190516215147.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="淋雨一直走">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/06/V2ray一键安装/" itemprop="url">V2ray一键安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-06T12:28:15+08:00">
+                2019-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/V2ray脚本/" itemprop="url" rel="index">
+                    <span itemprop="name">V2ray脚本</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/06/V2ray一键安装/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/06/V2ray一键安装/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本文从零开始，手把手教你搭建自己的V2ray和SS服务器实现全球互联。史上最详细的小白搭建V2ray和ss教程。内容包括VPS购买，连接VPS，一键搭建V2ray和SS，开启bbr加速，客户端配置。</p>
+<h2 id="一、购买境外VPS服务器"><a href="#一、购买境外VPS服务器" class="headerlink" title="一、购买境外VPS服务器"></a>一、购买境外VPS服务器</h2><p><strong>1. 首先进入Vultr官网：<a href="https://www.vultr.com" target="_blank" rel="noopener">https://www.vultr.com</a> 进行注册</strong></p>
+<ul>
+<li>新用户充值即送50美元体验金！！！</li>
+<li>注意：密码首字母需要大写，且长度需要超过10个字符！！！</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606123326.png" alt="20190606123326.png"></p>
+<p><strong>2. 再次确认一遍注册邮箱和密码</strong><br><img src="http://bbbtr.pw/image/jpg/20190606123510.png" alt="20190606123510.png"></p>
+<p><strong>3. 登录并进入充值界面进行充值</strong></p>
+<ul>
+<li>支持信用卡，支付宝，微信支付。</li>
+<li>新用户首次充值即送50美元体验金！！！</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606123605.png" alt="20190606123605.png"></p>
+<p><strong>4. 创建服务器</strong></p>
+<ul>
+<li>点击右上方“+”号来创建服务器。</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606123703.png" alt="20190606123703.png"></p>
+<p><strong>5. 选择服务器机房</strong></p>
+<ul>
+<li>推荐使用东京和新加坡服务器，物理距离近，延迟要低不少。</li>
+<li>选择东京服务器可能需要点耐心，因为使用的人比较多，好多IP被墙，没有耐心的可以选择新加坡服务器。 查询服务器是否被墙下面会有讲到。</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606123756.png" alt="20190606123756.png"></p>
+<p><strong>6. 选择服务器操作系统及配置</strong></p>
+<ul>
+<li>选择服务器系统，推荐使用Debian9。</li>
+<li>选择完毕点击创建。</li>
+<li>服务器规格选择3.5美元的足矣</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606123840.png" alt="20190606123840.png"></p>
+<p><strong>7. 点击我们刚刚创建的服务器</strong></p>
+<ul>
+<li>进入查看服务器配置参数</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606123949.png" alt="20190606123949.png"></p>
+<p><strong>8. 服务器端口扫描</strong></p>
+<ul>
+<li>使用端口扫描工具扫描我们创建的服务器IP，查看22端口是否开放，如果是关闭的话按照上面教程重新创建服务器，直到“22”端口为开放状态。</li>
+<li>然后再删除之前被墙的服务器，Vultr服务器是按小时收费的，所以我们刚刚创建的服务器删除的话是不收费的。</li>
+<li>端口扫描工具我使用的是 <a href="http://coolaf.com/tool/port" target="_blank" rel="noopener">http://coolaf.com/tool/port</a> 你也可以上百度搜索端口扫描工具即可。</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606124157.png" alt="20190606124157.png"></p>
+<h2 id="二-使用MobaXterm连接服务器"><a href="#二-使用MobaXterm连接服务器" class="headerlink" title="二 使用MobaXterm连接服务器"></a>二 使用MobaXterm连接服务器</h2><p><strong>1. 安装MobaXterm</strong></p>
+<ul>
+<li><a href="https://mobaxterm.mobatek.net/download.html" target="_blank" rel="noopener">MobaXterm官网下载</a></li>
+<li>下载解压<br><strong>2. 连接服务器</strong></li>
+<li>点击Session</li>
+<li>点击SSH</li>
+<li>输入ip地址以及用户名</li>
+<li>点击OK连接</li>
+<li>输入密码回车（注意密码不会显示）</li>
+<li>连接成功<br><img src="http://bbbtr.pw/image/jpg/20190606125239.png" alt></li>
+</ul>
+<h2 id="三、搭建V2ray"><a href="#三、搭建V2ray" class="headerlink" title="三、搭建V2ray"></a>三、搭建V2ray</h2><p><strong>1. 使用一键安装脚本安装V2ray</strong></p>
+<ul>
+<li>推荐使用一键安装脚本，一行代码解决所有问题，感谢233yes.com提供的一键安装脚本</li>
+<li>复制下面的代码，然后在Xshell 黑色处点击右键粘贴，然后回车安装。（这里不能使用Ctrl+V粘贴）</li>
+</ul>
+<p><code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code><br><strong>2. 输入 “1” 进行安装</strong><br><img src="http://bbbtr.pw/image/jpg/20190606125609.png" alt="20190606125609.png"></p>
+<p><strong>3. 选择传输协议</strong></p>
+<ul>
+<li>没有特殊需要就直接回车，使用默认的TCP协议。<br><img src="http://bbbtr.pw/image/jpg/20190606125654.png" alt="20190606125654.png"></li>
+</ul>
+<p><strong>4. 选择端口号</strong></p>
+<ul>
+<li>输入端口号，这个自己随意，但是未了避免和以后折腾其他的东西冲突，推荐使用1000以上的端口号但是不能超过65535</li>
+<li>建议直接输入“10086” （没有特殊意义，单纯为了好记，PS：中国移动记得给我广告费）</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606125734.png" alt="20190606125734.png"></p>
+<p><strong>5. 广告拦截</strong></p>
+<ul>
+<li>是否开启广告拦截，看自己需要吧，推荐不要开启，开启广告拦截会消耗服务器资源，国外环境要比国内好得多<br><img src="http://bbbtr.pw/image/jpg/20190606125814.png" alt="20190606125814.png"></li>
+</ul>
+<p><strong>6. 开启SS</strong></p>
+<ul>
+<li>最好是开启，后面使用游戏加速器会用得上。</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606125848.png" alt="20190606125848.png"></p>
+<p><strong>7. 选择SS端口号</strong></p>
+<ul>
+<li>SS端口号，还是随意。但是千万不要和上面V2ray的端口号冲突。</li>
+</ul>
+<p><strong>8. 输入SS连接密码</strong></p>
+<ul>
+<li>这个没有要求，只要你自己能记得住就行，越简单越好。</li>
+</ul>
+<p><strong>9. 选择SS加密协议</strong></p>
+<ul>
+<li>推荐使用默认的</li>
+</ul>
+<p><strong>10. 搭建完成</strong></p>
+<ul>
+<li>接下来就是回车，回车。</li>
+<li>然后喝杯咖啡，抽根烟，等待几分钟，出现下面这个界面就表示服务器搭建完成了</li>
+</ul>
+<p><img src="http://bbbtr.pw/image/jpg/20190606130129.png" alt="20190606130129.png"></p>
+<h2 id="四、开启BBR"><a href="#四、开启BBR" class="headerlink" title="四、开启BBR"></a>四、开启BBR</h2><p>如果使用的是Debian9 系统，BBR是自动开启的。<br><a href="https://www.noobyy.com/1245.html" target="_blank" rel="noopener">Ubuntu 18.04/18.10开启BBR加速
+</a></p>
+<p><a href="https://www.noobyy.com/863.html" target="_blank" rel="noopener">CentOS 7 开启BBR加速</a></p>
+<h2 id="五、客户端使用"><a href="#五、客户端使用" class="headerlink" title="五、客户端使用"></a>五、客户端使用</h2><p><a href="https://www.noobyy.com/126.html" target="_blank" rel="noopener">V2ray和SS客户端使用教程</a></p>
+<h2 id="六、物尽其用"><a href="#六、物尽其用" class="headerlink" title="六、物尽其用"></a>六、物尽其用</h2><p>这么高配置的服务器只用来搭建梯子服务器？未免也太浪费了吧，接下来教你在梯子服务器的基础上再搭建一个 个人网盘服务器。<br><a href="https://www.noobyy.com/173.html" target="_blank" rel="noopener">使用NextCloud搭建个人网盘服务器</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/20/安装Mongodb/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -854,7 +1108,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -865,7 +1119,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -876,7 +1130,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
